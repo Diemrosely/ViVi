@@ -1,29 +1,23 @@
+import React from  'react';
+import Exposure from './components/form';
+import { useStoreContext } from '../utils/GlobalStore';
+import ViVi from '../components/jumbotron';
 import React from 'react';
 import Table from '../components/patienttable'
+function Patient() {
+    const [state] = useStoreContext();
+    const {email} = state;
+    return( <div className="container">
+    <div className="row">
+      <div className="col-md-6 col-md-offset-3">
+          <ViVi/>
+        <h2>Welcome {email}</h2>
+        <Exposure/>
+         </div>
+    </div>
+  </div>
+)
+}
 
-renderTableData() {
-    return this.state.students.map((student, index) => {
-       const { id, name, age, email } = student //destructuring
-       return (
-          <tr key={id}>
-             <td>{id}</td>
-             <td>{name}</td>
-             <td>{age}</td>
-             <td>{email}</td>
-          </tr>
-       )
-    })
- };
+export default Patient;
 
- render() {
-    return (
-       <div>
-          <h1 id='title'>React Dynamic Table</h1>
-          <table id='students'>
-             <tbody>
-                {this.renderTableData()}
-             </tbody>
-          </table>
-       </div>
-    )
- };
