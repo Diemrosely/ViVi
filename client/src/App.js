@@ -4,6 +4,7 @@ import './App.css';
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Members from "./pages/Members";
+// import Patient from "./pages/Patient";
 import { useStoreContext } from './utils/GlobalStore';
 import API from './utils/API';
 import { AUTH_SET_LOGGED_IN, AUTH_SET_LOGGED_OUT } from "./utils/actions";
@@ -80,6 +81,7 @@ function App() {
                                     <Redirect to="/members" />
                                 </Route>
                                 <Route exact path="/members" component={Members} />
+                                
                             </>
                             )
                     }
