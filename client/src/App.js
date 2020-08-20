@@ -58,7 +58,7 @@ function App() {
                             // If the user is Logged In
                             <>
                                 <b>Welcome {state.email}!</b> &nbsp;&nbsp;&nbsp;
-                                <Link to="/members">Members</Link> | <a onClick={() => logout() }href="#">Logout</a>
+                                <Link to="/members">Members</Link> | <a onClick={() => logout() }href="/">Logout</a>
                             </>
                         )
                         }
