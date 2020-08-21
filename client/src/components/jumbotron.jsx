@@ -2,19 +2,16 @@ import React from 'react';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import Container from 'react-bootstrap/container';
 
-const ViVi = () =>{
-
-
-
+const AppJumbo = () =>{
 return (
-    <Jumbotron fluid>
-  <Container>
+    <Jumbotron>
+      <div className="container">
     <h1>Virtual Visit</h1>
     <p>
      Just testing our Jumbotron 
     </p>
-  </Container>
+    </div>
 </Jumbotron>
 )
 }
-export default ViVi;
+export default AppJumbo;

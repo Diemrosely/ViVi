@@ -22,6 +22,7 @@ class Table extends Component {
                   <td>{name}</td>
                   <td>{age}</td>
                   <td>{email}</td>
+                  <td><button>Notify</button></td>
                </tr>
             )
          })
