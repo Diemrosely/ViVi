@@ -1,6 +1,7 @@
 // Requiring our models and passport as we've configured it
 const db = require("../models");
 const passport = require("../config/passport");
+var Patient = require("../models/patient.js");
 
 module.exports = function(app) {
   // Route for logging in
@@ -43,5 +44,44 @@ module.exports = function(app) {
         id: req.user.id
       });
     }
+  });
+
+
+  // CRUD routes
+  app.get("/api/all", function(req, res) {
+    Patient.findAll({}).then(function(results) {
+      res.json(results);
+    });
+
+  });
+  
+
+  app.post("/api/new", function(req, res) {
+
+    console.log(req.body);
+
+    Patient.create({
+      Name: req.body.name,
+      Email: req.body.email,
+      Phone: req.body.phone,
+      app_date: req.body.date,
+      notes: req.body.notes
+    }).then(function(results) {
+      // `results` here would be the newly created chirp
+      res.end();
+    });
+
+  });
+
+  app.delete("/api/delete/:id", function(req, res) {
+    console.log("Patient ID:");
+    console.log(req.params.id);
+    Patient.destroy({
+      where: {
+        id: req.params.id
+      }
+    }).then(function() {
+      res.end();
+    });
   });
 };
