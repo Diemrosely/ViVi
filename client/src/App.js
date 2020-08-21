@@ -79,7 +79,7 @@ function App() {
                             <>                                
                                 <Route exact path="/login" component={Login} />
                                 <Route exact path="/signup" component={Signup} />
-                                <Route path="/" component={Landing} exact />
+                                <Route exact path="/" component={Landing} />
                             </>
                         ) : (
                             // These routes are only available to LOGGED IN users
