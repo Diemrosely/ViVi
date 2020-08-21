@@ -1,21 +1,24 @@
 
-var Sequelize = require("sequelize");
-// sequelize (lowercase) references our connection to the DB.
-var sequelize = require("../config/connection.js");
+// var Sequelize = require("sequelize");
+// // sequelize (lowercase) references our connection to the DB.
+// var sequelize = require("../config/connection.js");
 
 // Creates a "Patient" model that matches up with DB
+
+module.exports = function (sequelize, DataTypes) { 
 var Patient = sequelize.define("patient", {
-  Name: Sequelize.STRING,
-  Email: Sequelize.STRING,
-  app_date: Sequelize.STRING,
-  created_at: Sequelize.DATE,
-  phone_number: Sequelize.INTEGER,
-  Notes: Sequelize.STRING,
-  Covid: Sequelize.STRING
+  Name: DataTypes.STRING,
+  Email: DataTypes.STRING,
+  app_date: DataTypes.STRING,
+  created_at: DataTypes.DATE,
+  phone_number: DataTypes.INTEGER,
+  Notes: DataTypes.STRING,
+  Covid: DataTypes.STRING
 });
-
+return Patient
+}
 // Syncs with DB
-Patient.sync();
+// Patient.sync();
 
-// Makes the Patient Model available for other files (will also create a table)
-module.exports = Patient;
+// // Makes the Patient Model available for other files (will also create a table)
+// module.exports = Patient;
