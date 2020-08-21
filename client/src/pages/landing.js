@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Modal from '../components/Modal/index';
-
+import PatientForm from '../components/form';
+ 
 class Landing extends Component {
     render() {
       return (
@@ -11,6 +12,7 @@ class Landing extends Component {
               >
                 The Best Has Happened To ME
               </div>
+              <PatientForm />
             </Modal>
         </div>
       );
