@@ -29,6 +29,10 @@
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
     "react-bootstrap": "^1.3.0",
+<<<<<<< HEAD
+=======
+    "react-dom": "^16.13.1",
+>>>>>>> f01d42646de68243b9e35387c637189142906f8c
     "sequelize": "^5.8.6"
   },
   "devDependencies": {

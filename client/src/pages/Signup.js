@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import API from "../utils/API";
 import { AUTH_SET_LOGGED_IN } from "../utils/actions";
 import { useStoreContext } from '../utils/GlobalStore';
+import ViVi from '../components/jumbotron';
+
 
 function Signup() {
     const [showError, setShowError] = useState(false);
@@ -32,7 +34,10 @@ function Signup() {
         })
     }
 
-    return <div>
+    return( 
+    <>
+    <ViVi/>
+    <div>
         <div className="container">
             <div className="row">
                 <div className="col-md-6 col-md-offset-3">
@@ -58,6 +63,8 @@ function Signup() {
             </div>
         </div>
     </div>
+    </>
+    )
 }
 
 export default Signup;

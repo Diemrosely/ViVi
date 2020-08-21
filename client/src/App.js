@@ -4,9 +4,11 @@ import './App.css';
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Members from "./pages/Members";
+// import Patient from "./pages/Patient";
 import { useStoreContext } from './utils/GlobalStore';
 import API from './utils/API';
 import { AUTH_SET_LOGGED_IN, AUTH_SET_LOGGED_OUT } from "./utils/actions";
+import Landing from './pages/landing';
 
 
 import Footer from './components/footer.jsx';
@@ -51,7 +53,7 @@ function App() {
     return (
 
         <Router>
-            <div>
+            <div className="container">
                 {/* Componetize this into Nav */}
             
                 <div>
@@ -59,7 +61,7 @@ function App() {
                             // if the user is Logged out
                             <>
                                 <b>Welcome Guest!</b> &nbsp;&nbsp;&nbsp;
-                                <Link to="/login">Login</Link> | <Link to="/signup">Signup</Link>
+                                <Link to="/">Home</Link> | <Link to="/login">Login</Link> | <Link to="/signup">Signup</Link>
                             </>
                         ) : (
                             // If the user is Logged In
@@ -69,15 +71,15 @@ function App() {
                             </>
                         )
                         }
-                </div>
+                    </div>
                 <Switch>
-                    {
-                        
+                    {                        
                         !state.userLoggedIn ? (
-                            // These routes are only avaialable to LOGGED OUT users
-                            <>
+                            // These routes are only available to LOGGED OUT users
+                            <>                                
                                 <Route exact path="/login" component={Login} />
                                 <Route exact path="/signup" component={Signup} />
+                                <Route path="/" component={Landing} exact />
                             </>
                         ) : (
                             // These routes are only available to LOGGED IN users
@@ -87,16 +89,19 @@ function App() {
                                     <Redirect to="/members" />
                                 </Route>
                                 <Route exact path="/members" component={Members} />
+                                
                             </>
                             )
                     }
                     {
                         /* These routes are ALWAYS available */
                     }
+                    
                     <Route>
                         { /*If none of the other pages match, redirect them to the main page */}
                         <Redirect to="/" />
                     </Route>
+                    
                 </Switch>
                 <Footer sticky="bottom" />
 
