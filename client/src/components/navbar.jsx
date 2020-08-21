@@ -2,7 +2,7 @@ import React from 'react';
 import Nav from 'react-bootstrap/Nav'
 
 
-const TableQue = () => { 
+const NavBar = () => { 
 
 return(
 <Nav variant="tabs" defaultActiveKey="/home">
@@ -18,4 +18,4 @@ return(
 </Nav>
 )
 }
-export default TableQue;
+export default NavBar;
