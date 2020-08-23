@@ -29,7 +29,7 @@ function Login() {
             });
         }).catch(err => {
             setShowError(true);
-            setErrorMessage("An error occurred during login");
+            setErrorMessage("Incorrect Username or Password");
         })
     }
 
