@@ -30,7 +30,7 @@ function Signup() {
             });
         }).catch(err => {
             setShowError(true);
-            setErrorMessage("An error occurred while signing up");
+            setErrorMessage("E-mail address must be unique");
         })
     }
 
