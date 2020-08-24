@@ -2,7 +2,8 @@ import React from "react";
 import { useStoreContext } from '../utils/GlobalStore';
 import NavBar from '../components/navbar';
 import AppJumbo from '../components/jumbotron';
-import Table from '../components/waitingtable';
+import WaitingTable from '../components/waitingtable';
+import Table from 'react-bootstrap/Table';
 import '../components/waitingtable.css';
 
 function Members() {
@@ -28,7 +29,30 @@ function Members() {
       </div>                   */}
         <div className="row">
           <div className="col text-center mx-0 px-0">
-            <table> <Table /></table>
+            <Table striped bordered hover variant="dark" style={{margin:"20px"}}> 
+              <thead style={{textDecoration:"underline"}}>
+                <tr>
+                  <th>
+                    Id
+                  </th>
+                  <th>
+                    Name
+                  </th>
+                  <th>
+                    Age
+                  </th>
+                  <th>
+                    Email
+                  </th>
+                  <th>
+                    Alert
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+              <WaitingTable />
+              </tbody>
+            </Table>
           </div>
         </div>
       </div>

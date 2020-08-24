@@ -185,7 +185,7 @@ function PatientForm() {
                     </Form.Group>
                     <Form.Group as={Row}>
                     <Col sm={{ span: 10, offset: 2 }}>
-                    <Button type="submit">Submit</Button>
+                    <Button type="submit" variant="dark">Submit</Button>
                     </Col>
                     </Form.Group>
                 </fieldset>

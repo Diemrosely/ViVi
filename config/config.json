@@ -4,9 +4,9 @@
   },
   "test": {
     "username": "root",
-    "password": "VenkatHimaja@08",
+    "password": null,
     "database": "database_test",
-    "host": "127.0.0.1",
+    "host": "localhost",
     "dialect": "mysql"
   },
   "production": {

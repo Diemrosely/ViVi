@@ -10,7 +10,6 @@ class Landing extends Component {
               <div 
                   style={{color:'black'}}
               >
-                The Best Has Happened To ME
               </div>
               <PatientForm />
             </Modal>
