@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Button from 'react-bootstrap/Button';
 
-
+{/* Updated Table */}
 class WaitingTable extends Component {
   
        state = { //state is by default an object

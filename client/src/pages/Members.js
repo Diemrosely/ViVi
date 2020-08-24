@@ -29,6 +29,7 @@ function Members() {
       </div>                   */}
         <div className="row">
           <div className="col text-center mx-0 px-0">
+            {/* Updated Table */}
             <Table striped bordered hover variant="dark" style={{margin:"20px"}}> 
               <thead style={{textDecoration:"underline"}}>
                 <tr>
