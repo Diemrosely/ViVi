@@ -2,7 +2,6 @@ import React from 'react';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
 
 function PatientForm() {
     return (
@@ -185,7 +184,7 @@ function PatientForm() {
                     </Form.Group>
                     <Form.Group as={Row}>
                     <Col sm={{ span: 10, offset: 2 }}>
-                    <Button type="submit">Submit</Button>
+                    {/* <Button type="submit">Submit</Button> */}
                     </Col>
                     </Form.Group>
                 </fieldset>
