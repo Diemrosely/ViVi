@@ -1,19 +1,23 @@
 import React, { Component } from "react";
-import Modal from '../components/Modal/index';
-import PatientForm from '../components/form';
- 
+import ModalPopUp from "../components/Modal";
+import { Container, Row } from 'react-bootstrap';
+// import ModalPopUp from "../components/Modal/index";
+// import PatientForm from '../components/form';
+import Image1 from  '../assets/FirstSection/Sign.png';
+import './landing.css'
+
 class Landing extends Component {
     render() {
       return (
-        <div className="App">
-            <Modal>
-              <div 
-                  style={{color:'black'}}
-              >
-              </div>
-              <PatientForm />
-            </Modal>
-        </div>
+          <Container>
+              <Row>
+              <img src={Image1} alt="First Image" className="picture"/>
+              </Row>
+              <Row>
+                <ModalPopUp/>
+              </Row>
+          </Container>
+              
       );
     }
   }
