@@ -7,3 +7,17 @@ html, body {
   max-width: 100%;
   overflow-x: hidden;
 }
+
+.app-main {
+  height: 100vh; 
+  position: relative;
+}
+
+footer {
+  position: absolute;
+  bottom: 0; 
+}
+
+.notifybtn {
+  color:white;
+}

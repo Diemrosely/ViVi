@@ -9,14 +9,14 @@ import './landing.css'
 class Landing extends Component {
     render() {
       return (
-          <Container>
+          <div>
               <Row>
               <img src={Image1} alt="First Image" className="picture"/>
               </Row>
               <Row>
                 <ModalPopUp/>
               </Row>
-          </Container>
+          </div>
               
       );
     }
