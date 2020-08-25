@@ -1,15 +1,17 @@
 import React from 'react';
 import Jumbotron from 'react-bootstrap/Jumbotron';
+import Container from 'react-bootstrap/Container';
 
 const AppJumbo = () =>{
 return (
-    <Jumbotron>
-      <div className="container">
-    <h1>Virtual Visit</h1>
+  <Jumbotron fluid>
+  
+    <h1>Fluid jumbotron</h1>
     <p>
-     Just testing our Jumbotron 
+      This is a modified jumbotron that occupies the entire horizontal space of
+      its parent.
     </p>
-    </div>
+  
 </Jumbotron>
 )
 }
