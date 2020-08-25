@@ -9,57 +9,51 @@ import '../components/waitingtable.css';
 function Members() {
   const [state] = useStoreContext();
   const { email } = state;
-  return(
-  <div className="container">
-    <div className="row">
-      <div>
-        <div className="row">
-          {/* <div className="col"></div> */}
-          <div className="col text-center">
-            <NavBar />
-          </div>
-          <div className="col text-right">
-            <span>Welcome {email}</span>
-          </div>
+  return (
+    <div>
+      <div className="row">
+        <div className="col text-center">
+          <NavBar />
         </div>
-        {/* <div className="row mx-0 px-0">
-        <div className="col text-center mx-0 px-0"> */}
-        <AppJumbo />
-        {/* </div>
-      </div>                   */}
-        <div className="row">
-          <div className="col text-center mx-0 px-0">
-            {/* Updated Table */}
-            <Table striped bordered hover variant="dark" style={{margin:"20px"}}> 
-              <thead style={{textDecoration:"underline"}}>
-                <tr>
-                  <th>
-                    Id
-                  </th>
-                  <th>
-                    Name
-                  </th>
-                  <th>
-                    Age
-                  </th>
-                  <th>
-                    Email
-                  </th>
-                  <th>
-                    Alert
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-              <WaitingTable />
-              </tbody>
-            </Table>
-          </div>
+        <div className="col text-right">
+          <span>Welcome {email}</span>
         </div>
       </div>
-      {/* <div className="col-sm-2"></div> */}
+      <AppJumbo />
+      <div className="row">
+        <div className="col text-center">
+          {/* Updated Table */}
+          <Table striped bordered hover variant="dark" >
+            <thead style={{ textDecoration: "underline" }, { backgroundColor: "#5532A8" }}>
+              <tr>
+                <th>
+                  Id
+                  </th>
+                <th>
+                  Name
+                  </th>
+                <th>
+                  Age
+                  </th>
+                <th>
+                  Email
+                  </th>
+                <th>
+                  Status
+                  </th>
+                <th>
+                  Alert
+                  </th>
+              </tr>
+            </thead>
+            <tbody>
+              <WaitingTable />
+            </tbody>
+          </Table>
+        </div>
+      </div>
     </div>
-  </div>
-  )}
+  )
+}
 
 export default Members;

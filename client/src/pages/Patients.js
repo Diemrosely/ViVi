@@ -1,22 +1,21 @@
-import React from  'react';
+import React from 'react';
 import Exposure from './components/form';
 import { useStoreContext } from '../utils/GlobalStore';
 import ViVi from '../components/jumbotron';
 import React from 'react';
 import Table from '../components/patienttable'
 function Patient() {
-    const [state] = useStoreContext();
-    const {email} = state;
-    return( <div className="container">
+  const [state] = useStoreContext();
+  const { email } = state;
+  return (
     <div className="row">
       <div className="col-md-6 col-md-offset-3">
-          <ViVi/>
+        <ViVi />
         <h2>Welcome {email}</h2>
-        <Exposure/>
-         </div>
+        <Exposure />
+      </div>
     </div>
-  </div>
-)
+  )
 }
 
 export default Patient;
