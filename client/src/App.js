@@ -53,7 +53,7 @@ function App() {
     return (
 
         <Router>
-            <div className="container">
+            <div className="container"> <div className="app-main">
                 {/* Componetize this into Nav */}
             
                 <div>
@@ -104,7 +104,7 @@ function App() {
                     
                 </Switch>
                 <Footer sticky="bottom" />
-
+                </div>
             </div>
         </Router>
     );
