@@ -34,11 +34,8 @@ function Login() {
     }
 
     return (
-       <>  
-    <ViVi/>
-   
-     <div>
-        <div className="container">
+        <>
+            <ViVi />
             <div className="row">
                 <div className="col-md-6 col-md-offset-3">
                     <h2>Login</h2>
@@ -61,9 +58,7 @@ function Login() {
                     <p>Or Sign up  <Link to="/signup">here</Link></p>
                 </div>
             </div>
-        </div>
-    </div>
-    </>
+        </>
     )
 }
 

@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
+// import Button from 'react-bootstrap/Button';
+import '../App.css'; 
 
-
-class Table extends Component {
+{/* Updated Table */}
+class WaitingTable extends Component {
   
        state = { //state is by default an object
           students: [
@@ -15,18 +17,23 @@ class Table extends Component {
  
     render() { //Whenever our class runs, render method will be called automatically, it may have already defined in the constructor behind the scene.
         return this.state.students.map((student, index) => {
-            const { id, name, age, email } = student //destructuring
+            const { id, name, age, email, status } = student //destructuring
+            var mailto = "mailto:" + email +  "?subject=Appointment%20Alert%20&body= The%20doctor%20is%20ready%20for%20you%20now!"
             return (
+               
                <tr key={id}>
                   <td>{id}</td>
                   <td>{name}</td>
                   <td>{age}</td>
                   <td>{email}</td>
-                  <td><button>Notify</button></td>
-               </tr>
+                  <td>{status}</td>
+                  <td> <a href= {mailto} className="btn btn-secondary" target = "_blank">Notify</a></td>
+                  </tr>
             )
          })
     }
  }
  
- export default Table
+ export default WaitingTable
+ 
+
