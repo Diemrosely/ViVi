@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import API from "../utils/API";
 import { AUTH_SET_LOGGED_IN } from "../utils/actions";
 import { useStoreContext } from '../utils/GlobalStore';
-import ViVi from "../components/jumbotron";
+// import AppJumbo from "../components/jumbotron";
 function Login() {
     const [showError, setShowError] = useState(false);
     const [errorMessage, setErrorMessage] = useState("");
@@ -35,7 +35,6 @@ function Login() {
 
     return (
         <>
-            <ViVi />
             <div className="row">
                 <div className="col-md-6 col-md-offset-3">
                     <h2>Login</h2>

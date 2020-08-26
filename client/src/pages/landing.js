@@ -3,7 +3,8 @@ import ModalPopUp from "../components/Modal";
 import { Container, Row } from 'react-bootstrap';
 // import ModalPopUp from "../components/Modal/index";
 // import PatientForm from '../components/form';
-import Image1 from  '../assets/FirstSection/Sign.png';
+import Image1 from  '../assets/FirstSection/final.png';
+import Image2 from '../assets/SecondSection/step.png';
 import './landing.css'
 
 class Landing extends Component {
@@ -15,6 +16,9 @@ class Landing extends Component {
               </Row>
               <Row>
                 <ModalPopUp/>
+              </Row>
+              <Row>
+              <img src={Image2} alt="Second Image" className="picture"/>
               </Row>
           </div>
               
