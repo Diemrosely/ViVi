@@ -12,13 +12,13 @@ class Landing extends Component {
       return (
           <div>
               <Row>
-              <img src={Image1} alt="First Image" className="picture"/>
+              <img src={Image1} alt="First Image" className="img-fluid"/>
               </Row>
               <Row>
                 <ModalPopUp/>
               </Row>
               <Row>
-              <img src={Image2} alt="Second Image" className="picture"/>
+              <img src={Image2} alt="Second Image" className="img-fluid"/>
               </Row>
           </div>
               
