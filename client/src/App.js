@@ -103,9 +103,10 @@ function App() {
                     </Route>
                     
                 </Switch>
-                <Footer sticky="bottom" />
+                
                 </div>
             </div>
+            <Footer sticky="bottom" />
         </Router>
     );
 }
