@@ -1,6 +1,5 @@
 import React from 'react';
-
-import { Row, Col, Form, Button} from 'react-bootstrap';
+import { Row, Col, Form} from 'react-bootstrap';
 
 function PatientForm() {
     return (
