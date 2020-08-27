@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 import API from "../utils/API";
 import { AUTH_SET_LOGGED_IN } from "../utils/actions";
 import { useStoreContext } from '../utils/GlobalStore';
+import Navbar from "react-bootstrap/Navbar";
+import Container from "react-bootstrap/Container";
+import Applogo from '../assets/images/Applogo.png';
 // import AppJumbo from "../components/jumbotron";
 function Login() {
     const [showError, setShowError] = useState(false);
@@ -35,6 +38,23 @@ function Login() {
 
     return (
         <>
+        <div>
+            <img src= {Applogo} style={
+                {width:"150px",
+               height:"150px",
+               display:"block",
+               margin:"0 auto",
+               border:"none",
+            backgroundColor:"transparent"}}
+               alt='logo'/>
+        <Navbar expand="lg" variant="light" style={{backgroundColor:"#5532A8"}} >
+                <Container>
+                <Navbar.Brand href="#home">
+                </Navbar.Brand>
+                  </Container>
+        </Navbar>
+
+        </div>
             <div className="row">
                 <div className="col-md-6 col-md-offset-3">
                     <h2>Login</h2>
