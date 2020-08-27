@@ -1,32 +1,50 @@
-# Project 2 Template
+# ViVi 
 
-## BEFORE YOU BEGIN 
-1. Run `db/schema.sql` to create your database
-2. Make sure to create a `.env` file and copy the contents of `.env.example` into it.
-3. In the `.env` file replace the ???? for SESSION_SECRET and set your db credentials in LOCALDB_URL
-it should look something like this
-```
-SESSION_SECRET=SomethingBesidesKeyboardCat
-LOCALDB_URL=mysql://root:dbpassword@localhost:3306/Project2Dev
-```
-**NOTE** Do *not* check in your `.env` file into source control, it is particular to *your* environment.
+## User Story
 
-## Scripts
-### Install
-    npm install
-### Run (production)
-    npm start
-### Run (dev)
-    npm run watch
-### Tests (includes linting)
-    npm test
-### Linting by itself (only detects errors)
-    npm run lint
-### Autofix linting errors where pssible (Note: this will not necessarily fix all of them)
-    npm run fix
+AS a health professional <br>
+I WANT to create a contact free check-in procedure <br>
+SO that i can maintain the well being of my patients and staff
 
-    
-### Associated Links (requires you to be logged into github):
-[Project Requirements](https://github.com/the-Coding-Boot-Camp-at-UT/UTA-AUS-FSF-FT-06-2020-U-C/blob/master/01-Class-Content/15-Project-2/02-Homework/README.md
+## Description 
 
-[Deployment w/ Sequelize](https://github.com/the-Coding-Boot-Camp-at-UT/UTA-AUS-FSF-FT-06-2020-U-C/blob/master/01-Class-Content/14-Full-Stack/04-Supplemental/SequelizeHerokuDeploymentProcess.md)
+This application will allow doctors to manage appointments virtually to minimize contact. Patients will be screened for COVID symptoms prior to entry in order to execute proper protocols.  
+
+## Technologies Used
+
+* Sendgrid (new tech.)
+* Materialize (new tech.)
+* React-Bootstrap
+* My SQL
+* Express
+* Node JS
+* React 
+* CSS
+* Heroku
+* Github 
+* Kanban Project Boards 
+
+## Features
+
+* Patients will fill out a covid pre screening form
+* Doctor's and doctor's administrators will be able to log in with authentication
+* The results will then be populated on a waiting list table on the doctor's login landing page
+* Depending on the patients results, they will be categorized as either green, yellow or red depending on severity 
+* The doctor will then have the option to notify the patient when they are ready to see them
+* Once the "Notify" button is pressed, an email template with the patient's email will automatically populate in a new tab
+* 
+
+
+## Links
+
+Github Repo: https://github.com/Diemrosely/project3
+
+Github Pages: 
+
+## Screenshots
+
+![Alt text](Assets/screenshots/top.PNG "Main")
+
+![Alt text](Assets/screenshots/main.PNG "Main")
+
+![Alt text](Assets/screenshots/contact.PNG "Main")

@@ -6,18 +6,12 @@ import Col from 'react-bootstrap/Col';
 
 function Footer() {
     return (
-         < footer className = "mt-5" style={{backgroundColor:"lightgrey", textAlign: "center", width:"100%"}}>
-        < Container >
-        <Row className="border-top justify-content-start p-3">
-        <Col className="p-0" md={3} sm={12}>
-            <b>"ViVi"</b>
-            <b> @CopyRight 2020</b>
+         < footer className = "mt-5" style={{backgroundColor:"eeeef3", width:"100%", fontFamily: "serif"}}>
+        <Row>
+        <Col className="p-0 text-center">
+            <div>&copy; VIVI 2020 All Rights Reserved</div>
         </Col>
-
         </Row>
-
-        </Container>
-
         </footer>
     );
 
