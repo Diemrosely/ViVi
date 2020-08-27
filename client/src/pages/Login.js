@@ -1,11 +1,10 @@
-import React, { useRef, useState } from "react"
-import { Link } from "react-router-dom";
+import React, { useRef, useState } from "react";
 import API from "../utils/API";
 import { AUTH_SET_LOGGED_IN } from "../utils/actions";
 import { useStoreContext } from '../utils/GlobalStore';
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
-import Applogo from '../assets/images/Applogo.png';
+import logologo from '../assets/images/logologo.png';
 // import AppJumbo from "../components/jumbotron";
 function Login() {
     const [showError, setShowError] = useState(false);
@@ -39,11 +38,12 @@ function Login() {
     return (
         <>
         <div>
-            <img src= {Applogo} style={
-                {width:"150px",
-               height:"150px",
+            <img src= {logologo} style={
+                {width:"10%",
+               height:"10%",
                display:"block",
                margin:"0 auto",
+               marginBottom: "15px",
                border:"none",
             backgroundColor:"transparent"}}
                alt='logo'/>
@@ -73,8 +73,6 @@ function Login() {
                         </div>
                         <button type="submit" className="btn btn-default">Login</button>
                     </form>
-                    <br />
-                    <p>Or Sign up  <Link to="/signup">here</Link></p>
                 </div>
             </div>
         </>

@@ -6,7 +6,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import Image1 from  '../assets/FirstSection/final.png';
 import Image2 from '../assets/SecondSection/step.png';
 import './landing.css'
-import ButtonAppBar from '../components/NavBar2/navbar2.jsx'
+import ButtonAppBar from '../components/NavBar2/navbar2.jsx';
 // import Video from '../assets/FirstSection/background.mp4'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 

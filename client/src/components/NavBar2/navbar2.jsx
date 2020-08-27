@@ -30,7 +30,7 @@ export default function ButtonAppBar() {
           <img src={ViviIcon} alt="First Image"/>
           </IconButton>
          </Col> <Col className="text-right">
-          <Button color="inherit" className='loginButton' >Login</Button>
+          <Button color="inherit" className='loginButton' > <a href="/login">Login</a></Button>
         </Col>
         </Row>
         </Toolbar>
