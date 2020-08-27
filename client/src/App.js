@@ -9,10 +9,12 @@ import { useStoreContext } from './utils/GlobalStore';
 import API from './utils/API';
 import { AUTH_SET_LOGGED_IN, AUTH_SET_LOGGED_OUT } from "./utils/actions";
 import Landing from './pages/landing';
-
-
+import { library } from '@fortawesome/fontawesome-svg-core';
+ import { fas } from '@fortawesome/free-solid-svg-icons';
+import { far } from '@fortawesome/free-regular-svg-icons';  
 import Footer from './components/footer.jsx';
 
+library.add(far, fas);
 
 function App() {
     // Our provider is setup in index.js so we can use the GlobalStore here easily.
