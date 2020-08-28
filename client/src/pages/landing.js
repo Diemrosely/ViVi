@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ModalPopUp from "../components/Modal";
-import Row from 'react-bootstrap/row';
+import { Container, Row, Col } from 'react-bootstrap';
 // import ModalPopUp from "../components/Modal/index";
 // import PatientForm from '../components/form';
 import Image1 from  '../assets/FirstSection/final.png';
