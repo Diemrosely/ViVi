@@ -13,7 +13,7 @@ import Image3 from '../assets/images/why.png';
 
 class Landing extends Component {
     render() {
-      const addIcon = <FontAwesomeIcon size="3x" icon={["fas", "arrow-alt-circle-right"]}/> 
+      const addIcon = <FontAwesomeIcon size="3x" icon={["fas", "arrow-alt-circle-right"]}/>
       return (
           <div>
               <ButtonAppBar/>
