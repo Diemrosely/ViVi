@@ -5,6 +5,7 @@ import { useStoreContext } from '../utils/GlobalStore';
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
 import logologo from '../assets/images/logologo.png';
+import ButtonAppBar from '../components/Navbar3/navbar3.jsx';
 // import AppJumbo from "../components/jumbotron";
 function Login() {
     const [showError, setShowError] = useState(false);
@@ -38,6 +39,9 @@ function Login() {
     return (
         <>
         <div>
+            <div>
+              <ButtonAppBar />
+            </div>
             <img src= {logologo} style={
                 {width:"10%",
                height:"10%",
