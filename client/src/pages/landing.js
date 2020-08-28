@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ModalPopUp from "../components/Modal";
-import { Container, Row } from 'react-bootstrap';
+import Row from 'react-bootstrap/row';
 // import ModalPopUp from "../components/Modal/index";
 // import PatientForm from '../components/form';
 import Image1 from  '../assets/FirstSection/final.png';
@@ -12,13 +12,13 @@ class Landing extends Component {
       return (
           <div>
               <Row>
-              <img src={Image1} alt="First Image" className="img-fluid"/>
+              <img src={Image1} alt="First graphic" className="img-fluid"/>
               </Row>
               <Row>
                 <ModalPopUp/>
               </Row>
               <Row>
-              <img src={Image2} alt="Second Image" className="img-fluid"/>
+              <img src={Image2} alt="Second graphic" className="img-fluid"/>
               </Row>
           </div>
               
