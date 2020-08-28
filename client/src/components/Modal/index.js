@@ -2,17 +2,25 @@ import React, { useState } from 'react';
 import { Modal, Button} from 'react-bootstrap';
 import PatientForm from '../form';
 
+
+// onInputChange = (event) => {
+//     const [value, newValue] = useState('');
+//     event.preventDefault();
+//     let newValue = event.target.value;
+//     this.setState({value : newValue});
+// }
 function ModalPopUp() {
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-  
+
+
+
     return (
       <>
         <Button variant="primary" onClick={handleShow}>
           Launch static backdrop modal
         </Button>
-  
         <Modal
          show={show} onHide={handleClose} animation={false}
           size="lg"
@@ -23,7 +31,7 @@ function ModalPopUp() {
             <Modal.Title>Patient Evaluation</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <PatientForm/>
+            <PatientForm />
           </Modal.Body>
           <Modal.Footer>
             <Button variant="secondary" onClick={handleClose}>
@@ -35,7 +43,5 @@ function ModalPopUp() {
       </>
     );
   }
-  
 //   render(<ModalPopUp />);
-
   export default ModalPopUp;
