@@ -1,6 +1,9 @@
 import React from 'react';
 import { Row, Col, Form} from 'react-bootstrap';
+<<<<<<< HEAD
 
+=======
+>>>>>>> 33c97851bc35f20e8833bd21fddf4e6111a956f6
 
 class PatientForm extends React.Component {
   
