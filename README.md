@@ -4,7 +4,7 @@
 
 AS a health professional <br>
 I WANT to create a contact free check-in procedure <br>
-SO that i can maintain the well being of my patients and staff
+SO THAT I can maintain the health and well being of my patients and staff
 
 ### Description 
 
