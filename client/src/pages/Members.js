@@ -27,7 +27,7 @@ function Members() {
         <div className="col text-center">
           {/* Updated Table */}
           <Table striped bordered hover variant="dark" >
-            <thead style={{ textDecoration: "underline" }, { backgroundColor: "#5532A8" }}>
+            <thead style={{ textDecoration: "underline", backgroundColor: "#5532A8" }}>
               <tr>
                 <th>
                   Id

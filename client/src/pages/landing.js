@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ModalPopUp from "../components/Modal";
-import { Container, Row, Col } from 'react-bootstrap';
+import Row from 'react-bootstrap/row';
 // import ModalPopUp from "../components/Modal/index";
 // import PatientForm from '../components/form';
 import Image1 from  '../assets/FirstSection/final.png';
@@ -18,14 +18,14 @@ class Landing extends Component {
           <div>
               <ButtonAppBar/>
               <Row>
-              <img src={Image1} alt="First Image" className="img-fluid"/>
+              <img src={Image1} alt="First graphic" className="img-fluid"/>
               </Row>
               <Row className='hoverbox'>
                 <Col className='text-center patientbutton'>  Patient COVID-19 Pre-Screen Form { addIcon} </Col>
                 <Col className='text-right position-relative'><ModalPopUp/></Col>
               </Row>
               <Row>
-              <img src={Image2} alt="Second Image" className="img-fluid"/>
+              <img src={Image2} alt="Second graphic" className="img-fluid"/>
               </Row>
               <Row className='hoverbox'>
                 <Col className='text-center whyvivi'> HOW WE CAN HELP</Col>
