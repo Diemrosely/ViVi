@@ -3,36 +3,36 @@ const db = require("../models");
 const passport = require("../config/passport");
 var Patient = require("../models/patient.js");
 
-module.exports = function(app) {
+module.exports = function (app) {
   // Route for logging in
-  app.post("/api/login", passport.authenticate("local"), function(req, res) {
+  app.post("/api/login", passport.authenticate("local"), function (req, res) {
     res.json(req.user);
   });
 
   // Route for signing up a user. The user's password is automatically hashed and stored securely thanks to
   // how we configured our Sequelize User Model. If the user is created successfully, proceed to log the user in,
   // otherwise send back an error
-  app.post("/api/signup", function(req, res) {
+  app.post("/api/signup", function (req, res) {
     db.User.create({
       email: req.body.email,
       password: req.body.password
     })
-      .then(function() {
+      .then(function () {
         res.redirect(307, "/api/login");
       })
-      .catch(function(err) {
+      .catch(function (err) {
         res.status(401).json(err);
       });
   });
 
   // Route for logging user out
-  app.get("/logout", function(req, res) {
+  app.get("/logout", function (req, res) {
     req.logout();
     res.redirect("/");
   });
 
   // Route for getting some data about our user to be used client side
-  app.get("/api/user_data", function(req, res) {
+  app.get("/api/user_data", function (req, res) {
     if (!req.user) {
       // The user is not logged in, send back an empty object
       res.status(401).json({});
@@ -48,40 +48,48 @@ module.exports = function(app) {
 
 
   // CRUD routes
-  app.get("/api/all", function(req, res) {
-    Patient.findAll({}).then(function(results) {
+  app.get("/api/all", function (req, res) {
+    Patient.findAll({}).then(function (results) {
       res.json(results);
     });
 
   });
-  
 
-  app.post("/api/new", function(req, res) {
+
+  app.post("/api/new", function (req, res) {
 
     console.log(req.body);
 
     Patient.create({
-      Name: req.body.name,
-      Email: req.body.email,
-      Phone: req.body.phone,
-      app_date: req.body.date,
-      notes: req.body.notes
-    }).then(function(results) {
-      // `results` here would be the newly created chirp
-      res.end();
+      first: req.body.first,
+      last: req.body.last,
+      email: req.body.email,
+      covid: req.body.covid,
+    }).then(function (results) {
+      res.json(results);
     });
 
   });
 
-  app.delete("/api/delete/:id", function(req, res) {
+  app.delete("/api/delete/:id", function (req, res) {
     console.log("Patient ID:");
     console.log(req.params.id);
     Patient.destroy({
       where: {
         id: req.params.id
       }
-    }).then(function() {
+    }).then(function () {
       res.end();
     });
   });
+
+  // app.put("/api/update/:id", function (req, res) {
+  //   Patient.update(
+  //     {Covid: req.body.Covid},
+  //     {precheck: req.body.precheck},
+  //     {where: req.params.id}
+  //   )
+  // }).then(function () {
+  //   res.end();
+  // });
 };

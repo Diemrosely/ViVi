@@ -9,12 +9,12 @@ html, body {
 }
 
 .app-main {
-  height: 100vh; 
+  min-height: 100vh; 
   position: relative;
 }
 
 footer {
-  position: absolute;
+  position: relative;
   bottom: 0; 
 }
 

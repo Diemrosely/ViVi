@@ -6,11 +6,13 @@ import WaitingTable from '../components/waitingtable';
 import Table from 'react-bootstrap/Table';
 import '../components/waitingtable.css';
 
+
 function Members() {
   const [state] = useStoreContext();
   const { email } = state;
   return (
-    <div>
+   
+     <div>
       <div className="row">
         <div className="col text-center">
           <NavBar />
@@ -20,11 +22,12 @@ function Members() {
         </div>
       </div>
       <AppJumbo />
+      
       <div className="row">
         <div className="col text-center">
           {/* Updated Table */}
           <Table striped bordered hover variant="dark" >
-            <thead style={{ textDecoration: "underline" }, { backgroundColor: "#5532A8" }}>
+            <thead style={{ textDecoration: "underline", backgroundColor: "#5532A8" }}>
               <tr>
                 <th>
                   Id

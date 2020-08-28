@@ -1,0 +1,6 @@
+.Jumbotron{
+    background-image: url('../../src/assets/images/jumb.png');
+    background-size: cover;
+    width: 100%;
+    height: 50%;
+};

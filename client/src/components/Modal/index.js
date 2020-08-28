@@ -9,8 +9,8 @@ function ModalPopUp() {
   
     return (
       <>
-        <Button variant="primary" onClick={handleShow}>
-          Launch static backdrop modal
+        <Button className='patientClick' variant="primary" onClick={handleShow}>
+          Patients CLICK HERE!
         </Button>
   
         <Modal
