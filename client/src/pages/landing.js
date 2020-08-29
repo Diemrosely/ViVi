@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import ModalPopUp from "../components/Modal";
-import { Container, Row, Col } from 'react-bootstrap';
+import  {Row , Col}from 'react-bootstrap';
 // import ModalPopUp from "../components/Modal/index";
-// import PatientForm from '../components/form';
 import Image1 from  '../assets/FirstSection/final.png';
 import Image2 from '../assets/SecondSection/step.png';
 import './landing.css'
@@ -10,6 +9,7 @@ import ButtonAppBar from '../components/NavBar2/navbar2.jsx';
 // import Video from '../assets/FirstSection/background.mp4'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import Image3 from '../assets/images/why.png';
+
 
 class Landing extends Component {
     render() {
