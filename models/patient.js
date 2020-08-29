@@ -36,6 +36,7 @@ module.exports = function(sequelize, DataTypes) {
     Age: {
       type: DataTypes.STRING,
       isNumeric:true,
+      allowNull:false,
       validate: {
         notNull: {
           msg: 'please enter an age',
