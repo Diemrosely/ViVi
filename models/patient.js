@@ -8,7 +8,7 @@ module.exports = function(sequelize, DataTypes) {
       isAlpha: true,
       validate: {
         notNull: {
-          msg: 'Name cannot be null',
+          msg: 'First Name cannot be null',
         },
       },
     },
@@ -18,7 +18,7 @@ module.exports = function(sequelize, DataTypes) {
       isAlpha: true,
       validate: {
         notNull: {
-          msg: 'Name cannot be null',
+          msg: 'Last Name cannot be null',
         },
       },
     },   
@@ -33,6 +33,15 @@ module.exports = function(sequelize, DataTypes) {
         },
       },
     },
+    Age: {
+      type: DataTypes.STRING,
+      isNumeric:true,
+      validate: {
+        notNull: {
+          msg: 'please enter an age',
+      },
+  },
+},
     Covid: {
       type: DataTypes.STRING, 
     },
