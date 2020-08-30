@@ -2,13 +2,23 @@
 // Creates a "Patient" model that matches up with DB
 module.exports = function(sequelize, DataTypes) {
   var Patient = sequelize.define("patient", {
-    Name: {
+    firstName: {
       type: DataTypes.STRING,
       allowNull: false,
       isAlpha: true,
       validate: {
         notNull: {
-          msg: 'Name cannot be null',
+          msg: 'First Name cannot be null',
+        },
+      },
+    },
+    lastName: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      isAlpha: true,
+      validate: {
+        notNull: {
+          msg: 'Last Name cannot be null',
         },
       },
     },   
@@ -23,23 +33,21 @@ module.exports = function(sequelize, DataTypes) {
         },
       },
     },
-    app_date:  {
+    Age: {
+      type: DataTypes.STRING,
+      isNumeric:true,
+      allowNull:false,
+      validate: {
+        notNull: {
+          msg: 'please enter an age',
+      },
+  },
+},
+    Covid: {
       type: DataTypes.STRING, 
     },
     created_at: {
       type: DataTypes.STRING, 
-    },
-    phone_number: {
-      type: DataTypes.STRING, 
-    },
-    Notes:  {
-      type: DataTypes.STRING, 
-    },
-    Covid: {
-      type: DataTypes.STRING, 
-    },
-    Checked_In: {
-      type: DataTypes.BOOLEAN, 
     }
   });
   
