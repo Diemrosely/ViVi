@@ -14,7 +14,7 @@ html, body {
 }
 
 footer {
-  position: absolute;
+  position: relative;
   bottom: 0; 
 }
 
