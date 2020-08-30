@@ -10,6 +10,7 @@ import ButtonAppBar from '../components/NavBar2/navbar2.jsx'
 // import Video from '../assets/FirstSection/background.mp4'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import Image3 from '../assets/images/why.png';
+import LandingForm from '../components/LandingForm/index'
 
 class Landing extends Component {
     render() {
@@ -32,6 +33,9 @@ class Landing extends Component {
               </Row>
               <Row>
               <img src={Image3} alt="Third Image" className="img-fluid"/>
+              </Row>
+              <Row>
+                <LandingForm/>
               </Row>
           </div>
               
