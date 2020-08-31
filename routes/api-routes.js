@@ -2,6 +2,7 @@
 const db = require("../models");
 const passport = require("../config/passport");
 var Patient = require("../models/patient.js");
+const { restart } = require("nodemon");
 
 module.exports = function (app) {
   // Route for logging in
@@ -49,7 +50,7 @@ module.exports = function (app) {
 
   // CRUD routes
   app.get("/api/all", function (req, res) {
-    Patient.findAll({}).then(function (results) {
+    db.Patient.findAll({}).then(function (results) {
       res.json(results);
     });
 
@@ -57,19 +58,22 @@ module.exports = function (app) {
 
 
   app.post("/api/new", function (req, res) {
-
     console.log(req.body);
-
-    Patient.create({
+    db.Patient.create({
       first: req.body.first,
       last: req.body.last,
       email: req.body.email,
-      covid: req.body.covid,
+      age: req.body.age,
+      riskLevel: req.body.riskLevel,
     }).then(function (results) {
       res.json(results);
     });
 
   });
+
+  // app.get("/junk", function (req,res) {
+  //   res.send("junk")
+  // })
 
   app.delete("/api/delete/:id", function (req, res) {
     console.log("Patient ID:");
@@ -83,6 +87,11 @@ module.exports = function (app) {
     });
   });
 
+//   app.post("/api/newPatient", function (req,res) {
+// console.log("req.body")
+// console.log(req.body)
+// res.json(req.body)
+//   })
   // app.put("/api/update/:id", function (req, res) {
   //   Patient.update(
   //     {Covid: req.body.Covid},
