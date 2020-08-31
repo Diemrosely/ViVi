@@ -4,7 +4,7 @@ import { useStoreContext } from '../utils/GlobalStore';
 import ViVi from '../components/jumbotron';
 import React from 'react';
 import Table from '../components/patienttable'
-function Patient() {
+function PatientPage() {
   const [state] = useStoreContext();
   const { email } = state;
   return (
@@ -18,5 +18,5 @@ function Patient() {
   )
 }
 
-export default Patient;
+export default PatientPage;
 

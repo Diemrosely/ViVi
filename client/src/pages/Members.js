@@ -7,7 +7,7 @@ import Table from 'react-bootstrap/Table';
 import '../components/waitingtable.css';
 
 
-function Members() {
+function Members(props) {
   const [state] = useStoreContext();
   const { email } = state;
   return (
@@ -25,7 +25,7 @@ function Members() {
       
       <div className="row">
         <div className="col text-center">
-          {/* Updated Table */}
+    
           <Table striped bordered hover variant="dark" >
             <thead style={{ textDecoration: "underline", backgroundColor: "#5532A8" }}>
               <tr>
