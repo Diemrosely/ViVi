@@ -13,7 +13,7 @@
     "client": "cd client && npm start",
     "lint": "eslint --quiet .",
     "fix": "eslint --fix .",
-    "watch": "nodemon server.js",
+   // "watch": "nodemon server.js",
     "build": "cd client && npm run build",
     "heroku-postbuild": "npm run build"
   },
