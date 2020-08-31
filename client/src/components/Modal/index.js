@@ -53,7 +53,7 @@ function ModalPopUp() {
         return risk;
 
       risk += 1
-    }
+    
     if (count > 2 && count <= 4) {
       risk += 2
     }
@@ -117,13 +117,6 @@ function ModalPopUp() {
         </Modal.Header>
         <Modal.Body>
           <div>
-        <h2>COVID-19 SCREENING QUESTIONNAIRE</h2>
-        <Form style={{ backgroundColor: "whitesmoke", width: "600px" }}>
-          <fieldset className="covidForm" style={{ fontSize: "20px", paddingLeft: "10px", paddingRight: "10px" }}>
-            <Form.Group as={Row} controlId="formHorizontalEmail">
-              <Form.Label column sm={2}>
-                First Name:
-
             <h2>COVID-19 SCREENING QUESTIONNAIRE</h2>
             <Form style={{ backgroundColor: "whitesmoke" }}>
               <fieldset style={{ paddingLeft: "10px", paddingRight: "10px" }}>
@@ -316,35 +309,10 @@ function ModalPopUp() {
                 />
               </Col>
             </Form.Group>
-            <Form.Group as={Row}>
-              <Form.Label as="legend" column md={5}>
-                6.Fatigue ?
-
-                  <Col xs="auto" className="my-1">
-                    <Form.Check
-                      type="radio"
-                      name="headache"
-                      label="Yes"
-                      value={true}
-                      checked={headache === true}
-                      onChange={() => setHeadache(true)}
-                    />
-                  </Col>
-                  <Col xs="auto" className="my-1">
-                    <Form.Check
-                      type="radio"
-                      name="headache"
-                      label="no"
-                      value={false}
-                      checked={headache === false}
-                      onChange={() => setHeadache(false)}
-                    />
-                  </Col>
-                </Form.Group>
                 <Form.Group as={Row}>
                   <Form.Label as="legend" column md={5}>
                     6.Fatigue ?
-              </Form.Label>
+                 </Form.Label>
                   <Col xs="auto" className="my-1">
                     <Form.Check
                       type="radio"
@@ -371,7 +339,7 @@ function ModalPopUp() {
                     7.Have you had any close contact with anyone with
                     COVID-19("Close contact is defined as less than 6ft distance for
                     more than 10min") ?
-              </Form.Label>
+                 </Form.Label>
                   <Col xs="auto" className="my-1">
                     <Form.Check
                       type="radio"
