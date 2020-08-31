@@ -41,4 +41,4 @@ Heroku Deployment: https://viviproject3.herokuapp.com/
 
 ### Screenshots
 
-![Gif](src/assets/images/vivi.gif)
+![Gif](client/src/assets/images/vivi.gif)
