@@ -42,7 +42,7 @@ function Members(props) {
                   Email
                   </th>
                 <th>
-                  Status
+                  Risk level
                   </th>
                 <th>
                   Alert
