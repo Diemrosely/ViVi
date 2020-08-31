@@ -2,6 +2,7 @@
 const db = require("../models");
 const passport = require("../config/passport");
 var Patient = require("../models/patient.js");
+const { restart } = require("nodemon");
 
 module.exports = function (app) {
   // Route for logging in
@@ -34,9 +35,11 @@ module.exports = function (app) {
   // Route for getting some data about our user to be used client side
   app.get("/api/user_data", function (req, res) {
     if (!req.user) {
+      
       // The user is not logged in, send back an empty object
       res.status(401).json({});
     } else {
+      
       // Otherwise send back the user's email and id
       // Sending back a password, even a hashed password, isn't a good idea
       res.json({
@@ -46,10 +49,9 @@ module.exports = function (app) {
     }
   });
 
-
-  // CRUD routes
+    // CRUD routes
   app.get("/api/all", function (req, res) {
-    Patient.findAll({}).then(function (results) {
+    db.Patient.findAll({}).then(function (results) {
       res.json(results);
     });
 
@@ -57,14 +59,13 @@ module.exports = function (app) {
 
 
   app.post("/api/new", function (req, res) {
-
     console.log(req.body);
-
-    Patient.create({
+    db.Patient.create({
       first: req.body.first,
       last: req.body.last,
       email: req.body.email,
-      covid: req.body.covid,
+      age: req.body.age,
+      riskLevel: req.body.riskLevel,
     }).then(function (results) {
       res.json(results);
     });
@@ -82,14 +83,4 @@ module.exports = function (app) {
       res.end();
     });
   });
-
-  // app.put("/api/update/:id", function (req, res) {
-  //   Patient.update(
-  //     {Covid: req.body.Covid},
-  //     {precheck: req.body.precheck},
-  //     {where: req.params.id}
-  //   )
-  // }).then(function () {
-  //   res.end();
-  // });
 };
