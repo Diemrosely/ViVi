@@ -4,7 +4,6 @@ import { AUTH_SET_LOGGED_IN } from "../utils/actions";
 import { useStoreContext } from '../utils/GlobalStore';
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
-import logologo from '../assets/images/logologo.png';
 import ButtonAppBar from '../components/Navbar3/navbar3.jsx';
 // import AppJumbo from "../components/jumbotron";
 function Login() {
@@ -42,15 +41,6 @@ function Login() {
             <div>
               <ButtonAppBar />
             </div>
-            <img src= {logologo} style={
-                {width:"100px",
-            //    height:"10%",
-               display:"block",
-               margin:"0 auto",
-               marginBottom: "15px",
-               border:"none",
-            backgroundColor:"transparent"}}
-               alt='logo'/>
         <Navbar expand="lg" variant="light" style={{backgroundColor:"#5532A8"}} >
                 <Container>
                 <Navbar.Brand href="#home">
