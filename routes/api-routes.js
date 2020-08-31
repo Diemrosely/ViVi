@@ -35,9 +35,11 @@ module.exports = function (app) {
   // Route for getting some data about our user to be used client side
   app.get("/api/user_data", function (req, res) {
     if (!req.user) {
+      
       // The user is not logged in, send back an empty object
       res.status(401).json({});
     } else {
+      
       // Otherwise send back the user's email and id
       // Sending back a password, even a hashed password, isn't a good idea
       res.json({
@@ -47,8 +49,7 @@ module.exports = function (app) {
     }
   });
 
-
-  // CRUD routes
+    // CRUD routes
   app.get("/api/all", function (req, res) {
     db.Patient.findAll({}).then(function (results) {
       res.json(results);
@@ -71,10 +72,6 @@ module.exports = function (app) {
 
   });
 
-  // app.get("/junk", function (req,res) {
-  //   res.send("junk")
-  // })
-
   app.delete("/api/delete/:id", function (req, res) {
     console.log("Patient ID:");
     console.log(req.params.id);
@@ -86,19 +83,4 @@ module.exports = function (app) {
       res.end();
     });
   });
-
-//   app.post("/api/newPatient", function (req,res) {
-// console.log("req.body")
-// console.log(req.body)
-// res.json(req.body)
-//   })
-  // app.put("/api/update/:id", function (req, res) {
-  //   Patient.update(
-  //     {Covid: req.body.Covid},
-  //     {precheck: req.body.precheck},
-  //     {where: req.params.id}
-  //   )
-  // }).then(function () {
-  //   res.end();
-  // });
 };

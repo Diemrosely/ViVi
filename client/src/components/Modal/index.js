@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState} from 'react';
 import { Modal, Button, Row, Col, Form } from 'react-bootstrap';
 import utils from "../../utils/API.js";
 
@@ -21,69 +21,32 @@ function ModalPopUp() {
   const [exposure, setExposure] = useState(0);
   const [age, setAge] = useState(0)
 
-  // const [patients, SetPatients] = useState([]);
-
   const riskState = () => {
       
     let count = 0;
     let risk = 0;
-    let junk =null;
-   junk= dryCough ? count++ : null;
-   junk= sob ? count++ : null;
-   junk= Aches ? count++ : null;
-   junk= soreThroat ? count++ : null;
-   junk= headache ? count++ : null;
-   junk= fatigue ? count++ : null;
-   junk= exposure ? count++ : null;
-   junk= age ? count++ : null;
-    //  if(dryCough === true) {
-    // // count++
-    // setCount(count => ({count: count + 1}))
-    // console.log(count)
-    //  }
-    //  if(sob === true) {
-    //   // count++
-    //   setCount(count => ({count: count + 1}))
-    //  }
-    //  if(Aches === true) {
-    //   // count++ 
-    //   setCount(count => ({count: count + 1}))
-    // }
-    // if(soreThroat === true) {
-    //   // count++
-    //   setCount(count => ({count: count + 1}))
-    //  }
-    //  if(headache === true) {
-    //   // count++
-    //   setCount(count => ({count: count + 1}))
-    //  }
-    //  if(fatigue === true) {
-    //   // count++
-    //   setCount(count => ({count: count + 1}))
-    //  }
-    //  if(exposure === true) {
-    //   // count++
-    //   setCount(count => ({count: count + 1}))
-    //  }
-
-
+    let ternary= null;
+   ternary= dryCough ? count++ : null;
+   ternary= sob ? count++ : null;
+   ternary= Aches ? count++ : null;
+   ternary= soreThroat ? count++ : null;
+   ternary= headache ? count++ : null;
+   ternary= fatigue ? count++ : null;
+   ternary= exposure ? count++ : null;
+   
+  
     if (count <= 2) {
-      // setRiskLevel(riskLevel => ({riskLevel: riskLevel+ 1}))
       risk += 1
     }
     if (count > 2 && count <= 4) {
-      // setRiskLevel(riskLevel => ({riskLevel: riskLevel+ 2}))
       risk += 2
     }
     if (count > 4) {
-      // setRiskLevel(riskLevel => ({riskLevel: riskLevel+ 3}))
       risk += 3
     }
     setRiskLevel({ riskLevel: risk })
-    console.log("dryCough",dryCough);
     console.log("count",count);
     console.log("risk",risk)
-    console.log("riskLevel",riskLevel)
     return risk;
   }
 
@@ -114,7 +77,6 @@ function ModalPopUp() {
       email:email,
       age: age,
       riskLevel:r
-
     })
     .then((res) => { 
       console.log(res)
