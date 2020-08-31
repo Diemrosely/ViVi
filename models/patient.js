@@ -1,6 +1,6 @@
 // Creates a "Patient" model that matches up with DB
 module.exports = function (sequelize, DataTypes) {
-  var Patient = sequelize.define("patient", {
+  var Patient = sequelize.define("Patient", {
     first: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -26,7 +26,7 @@ module.exports = function (sequelize, DataTypes) {
       type: DataTypes.INTEGER,
       isNumeric: true,
       allowNull:false,
-    },
+    }
     
   });
 

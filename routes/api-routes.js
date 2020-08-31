@@ -1,7 +1,7 @@
 // Requiring our models and passport as we've configured it
 const db = require("../models");
 const passport = require("../config/passport");
-var Patient = require("../models/patient.js");
+// var Patient = require("../models/patient.js");
 const { restart } = require("nodemon");
 
 module.exports = function (app) {
