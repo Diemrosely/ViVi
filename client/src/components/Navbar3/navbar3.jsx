@@ -6,7 +6,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
-import ViviIcon from '../../../src/assets/images/logo.png';
+import ViviIcon from '../../../src/assets/images/logologo.png';
 import { Row, Col } from 'react-bootstrap'
 
 const useStyles = makeStyles((theme) => ({
@@ -28,7 +28,7 @@ export default function ButtonAppBar() {
             <Row>
                 <Col>
           <IconButton edge="start" className='iconButton' color="transparent" aria-label="menu">
-          <img src={ViviIcon} alt="First Image"/>
+          <img src={ViviIcon} className="viviicon" alt="First Image"/>
           </IconButton>
          </Col> <Col className="text-right">
           <Button color="inherit" className='loginButton' > <Link to="/"> Logout </Link> </Button>
