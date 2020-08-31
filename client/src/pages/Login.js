@@ -43,8 +43,8 @@ function Login() {
               <ButtonAppBar />
             </div>
             <img src= {logologo} style={
-                {width:"10%",
-               height:"10%",
+                {width:"100px",
+            //    height:"10%",
                display:"block",
                margin:"0 auto",
                marginBottom: "15px",

@@ -36,6 +36,22 @@ function ModalPopUp() {
    
   
     if (count <= 2) {
+        //  setRiskLevel({riskLevel: riskLevel + 1})
+        risk+= 1
+     }
+     if (count > 2 && count <= 4) {
+        // setRiskLevel({riskLevel: riskLevel + 2})
+        risk+= 2
+     }
+      if (count > 4) {
+        //  setRiskLevel({riskLevel:  riskLevel + 3})
+        risk +=3
+     }
+        console.log(dryCough);
+        console.log(count);
+        console.log(risk)
+        return risk;
+
       risk += 1
     }
     if (count > 2 && count <= 4) {
@@ -101,12 +117,20 @@ function ModalPopUp() {
         </Modal.Header>
         <Modal.Body>
           <div>
+        <h2>COVID-19 SCREENING QUESTIONNAIRE</h2>
+        <Form style={{ backgroundColor: "whitesmoke", width: "600px" }}>
+          <fieldset className="covidForm" style={{ fontSize: "20px", paddingLeft: "10px", paddingRight: "10px" }}>
+            <Form.Group as={Row} controlId="formHorizontalEmail">
+              <Form.Label column sm={2}>
+                First Name:
+
             <h2>COVID-19 SCREENING QUESTIONNAIRE</h2>
             <Form style={{ backgroundColor: "whitesmoke" }}>
               <fieldset style={{ paddingLeft: "10px", paddingRight: "10px" }}>
                 <Form.Group as={Row} controlId="formHorizontalEmail">
                   <Form.Label column sm={2}>
                     First Name:
+
               </Form.Label>
                   <Col sm={10}>
                     <Form.Control
@@ -271,6 +295,31 @@ function ModalPopUp() {
                   <Form.Label as="legend" column md={5}>
                     5.Headache ?
               </Form.Label>
+              <Col xs="auto" className="my-1">
+                <Form.Check
+                  type="radio"
+                  name="headache"
+                  label="Yes"
+                  value={true}
+                  checked= {headache === true }                 
+                  onChange={() => setHeadache(true)}
+                />
+              </Col>
+              <Col xs="auto" className="my-1">
+                <Form.Check
+                  type="radio"
+                  name="headache"
+                  label="No"
+                  value={false}
+                  checked= {headache === false }                 
+                  onChange={() => setHeadache(false)}
+                />
+              </Col>
+            </Form.Group>
+            <Form.Group as={Row}>
+              <Form.Label as="legend" column md={5}>
+                6.Fatigue ?
+
                   <Col xs="auto" className="my-1">
                     <Form.Check
                       type="radio"

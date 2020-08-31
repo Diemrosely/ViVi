@@ -1,0 +1,9 @@
+form{
+    margin: 50px auto;
+    min-width: 300px;
+    width: 60%;
+}
+
+.form.label{
+    color: white!important;
+}

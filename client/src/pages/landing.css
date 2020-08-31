@@ -1,3 +1,9 @@
+  
+@import url('https://fonts.googleapis.com/css?family=Russo+One');
+
+html{
+    font-size:14px;
+}
 .picture{
     width: 100%;
 }
@@ -8,7 +14,7 @@
 
 .hoverbox{
     box-shadow: 0 0.46875rem 2.1875rem rgba(8,10,37,.03), 0 0.9375rem 1.40625rem rgba(8,10,37,.03), 0 0.25rem 0.53125rem rgba(8,10,37,.05), 0 0.125rem 0.1875rem rgba(8,10,37,.03);
-    height: 5rem;
+    /* height: 5rem; */
     margin: 10px;
     border: 1px solid #f2f2f2;  
     border-radius: 8px;
@@ -17,8 +23,8 @@
 .patientClick{
     position: relative;
     top: 9%;
-    height: 45px;
-    width: 150px;
+    height: 35px;
+    width: 190px;
 }
 
 .fa-arrow-alt-circle-right{
@@ -36,9 +42,34 @@
     background: rgb(71, 41, 241);
     color: white;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    margin-bottom: 80px;
+    height: 3rem;
 }
 
 .patientbutton{
     font-size: 25px;
 }
+
+.viviicon{
+    width: 150px;
+}
+
+.covidForm{
+   width: 100%;
+}
+
+.form-check-input{
+position: absolute;
+width: 80px;
+}
+
+h1{
+    text-align: center;
+    font-family: 'Russo One', sans-serif;
+}
+
+.Jumbotron{
+    background-image: url('../../src/assets/images/jumbotron.png');
+    background-size: cover;
+    width: 100%;
+    height: 50%;
+};
