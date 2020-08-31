@@ -3,3 +3,7 @@ form{
     min-width: 300px;
     width: 60%;
 }
+
+.form.label{
+    color: white!important;
+}

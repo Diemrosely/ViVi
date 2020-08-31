@@ -3,7 +3,7 @@ import ModalPopUp from "../components/Modal";
 import  {Row , Col}from 'react-bootstrap';
 // import ModalPopUp from "../components/Modal/index";
 import Image1 from  '../assets/FirstSection/final.png';
-import Image2 from '../assets/SecondSection/step.png';
+import Image2 from '../assets/images/stepfinal.png';
 import './landing.css'
 import ButtonAppBar from '../components/NavBar2/navbar2.jsx';
 // import Video from '../assets/FirstSection/background.mp4'
@@ -34,7 +34,7 @@ class Landing extends Component {
               <Row>
               <img src={Image3} alt="Third Image" className="img-fluid"/>
               </Row>
-              <Row>
+              <Row style={{backgroundColor: "#83aac9"}}>
                 <LandingForm/>
               </Row>
           </div>

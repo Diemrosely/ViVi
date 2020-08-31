@@ -1,5 +1,8 @@
+  
+@import url('https://fonts.googleapis.com/css?family=Russo+One');
+
 html{
-    font-size:20px;
+    font-size:14px;
 }
 .picture{
     width: 100%;
@@ -20,8 +23,8 @@ html{
 .patientClick{
     position: relative;
     top: 9%;
-    height: 45px;
-    width: 150px;
+    height: 35px;
+    width: 190px;
 }
 
 .fa-arrow-alt-circle-right{
@@ -46,3 +49,27 @@ html{
     font-size: 25px;
 }
 
+.viviicon{
+    width: 150px;
+}
+
+.covidForm{
+   width: 100%;
+}
+
+.form-check-input{
+position: absolute;
+width: 80px;
+}
+
+h1{
+    text-align: center;
+    font-family: 'Russo One', sans-serif;
+}
+
+.Jumbotron{
+    background-image: url('../../src/assets/images/jumbotron.png');
+    background-size: cover;
+    width: 100%;
+    height: 50%;
+};

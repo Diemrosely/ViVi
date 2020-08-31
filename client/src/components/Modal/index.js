@@ -63,6 +63,7 @@ function ModalPopUp() {
         console.log(dryCough);
         console.log(count);
         console.log(risk)
+        return risk;
     }
        
   
@@ -108,8 +109,8 @@ function ModalPopUp() {
           <Modal.Body>
           <div>
         <h2>COVID-19 SCREENING QUESTIONNAIRE</h2>
-        <Form style={{ backgroundColor: "whitesmoke" }}>
-          <fieldset style={{ paddingLeft: "10px", paddingRight: "10px" }}>
+        <Form style={{ backgroundColor: "whitesmoke", width: "600px" }}>
+          <fieldset className="covidForm" style={{ fontSize: "20px", paddingLeft: "10px", paddingRight: "10px" }}>
             <Form.Group as={Row} controlId="formHorizontalEmail">
               <Form.Label column sm={2}>
                 First Name:
@@ -291,7 +292,7 @@ function ModalPopUp() {
                 <Form.Check
                   type="radio"
                   name="headache"
-                  label="no"
+                  label="No"
                   value={false}
                   checked= {headache === false }                 
                   onChange={() => setHeadache(false)}
