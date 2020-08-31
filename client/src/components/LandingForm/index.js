@@ -5,7 +5,7 @@ import './landingform.css'
 function LandingForm() {
 return(
 
-<Form className="form">
+<Form className="form img-fluid">
   <Form.Row>
     <Form.Group as={Col} controlId="formGridEmail">
       <Form.Label>Email</Form.Label>
