@@ -2,7 +2,7 @@
 const db = require("../models");
 const passport = require("../config/passport");
 // var Patient = require("../models/patient.js");
-const { restart } = require("nodemon");
+
 
 module.exports = function (app) {
   // Route for logging in
