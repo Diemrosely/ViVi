@@ -2,7 +2,6 @@
 const db = require("../models");
 const passport = require("../config/passport");
 var Patient = require("../models/patient.js");
-const { restart } = require("nodemon");
 
 module.exports = function (app) {
   // Route for logging in
@@ -53,10 +52,17 @@ module.exports = function (app) {
   app.get("/api/all", function (req, res) {
     db.Patient.findAll({}).then(function (results) {
       res.json(results);
+      console.log(results)
     });
 
   });
+  
+  app.get("/api/all/:id", function (req, res) {
+    db.Patient.findOne({_id: req.params.id}).then(function (results) {
+      res.json(results);
+    });
 
+  });
 
   app.post("/api/new", function (req, res) {
     console.log(req.body);

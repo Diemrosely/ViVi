@@ -20,7 +20,6 @@ module.exports = function (sequelize, DataTypes) {
     age: {
       type: DataTypes.INTEGER,
       isNumeric: true,
-      allowNull: false,
     },
     riskLevel: {
       type: DataTypes.INTEGER,

@@ -17,4 +17,10 @@ export default {
     newPatient: (data) => {
         return axios.post("/api/new", data)
     },
+    getPatient: (id) => {
+        return axios.get("/api/all/" + id)
+    },
+    getPatients: () => {
+        return axios.get("/api/all/")
+    },
 }

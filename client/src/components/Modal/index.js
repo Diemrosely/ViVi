@@ -20,7 +20,7 @@ function ModalPopUp() {
   const [fatigue, setFatigue] = useState(0);
   const [exposure, setExposure] = useState(0);
   const [age, setAge] = useState(0)
-
+  const [patient, setpatient] = useState([])
   const riskState = () => {
       
     let count = 0;
@@ -156,7 +156,7 @@ function ModalPopUp() {
                       type="age"
                       placeholder="age"
                       value={age}
-                      onChange={event => setAge(parseInt(event.target.value))}
+                      onChange={event => setAge(parseInt(event.target.value) || 0)}
                     />
                   </Col>
                 </Form.Group>
