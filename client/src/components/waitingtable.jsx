@@ -36,7 +36,7 @@ class WaitingTable extends React.Component {
                <td>{age}</td>
                <td>{email}</td>
                <td style= {{backgroundColor: riskColor[riskLevel] }}>{riskLevel}</td>
-               <td> <a href={mailto} className="btn btn-secondary" target="_blank">Notify</a></td>
+               <td> <a href={mailto} className="btn btn-secondary tblBtn" target="_blank">Notify</a></td>
             </tr>
          })}
       </tbody>)
