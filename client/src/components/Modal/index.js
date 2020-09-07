@@ -2,7 +2,7 @@ import React, { useState} from 'react';
 import { Modal, Button, Row, Col, Form } from 'react-bootstrap';
 import utils from "../../utils/API.js";
 
-function ModalPopUp() {
+function ModalPopUp() { 
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
