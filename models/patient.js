@@ -25,7 +25,7 @@ module.exports = function (sequelize, DataTypes) {
       type: DataTypes.INTEGER,
       isNumeric: true,
       allowNull:false,
-    },
+    }
     
   });
 

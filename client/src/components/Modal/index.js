@@ -36,8 +36,24 @@ function ModalPopUp() {
    
   
     if (count <= 2) {
+        //  setRiskLevel({riskLevel: riskLevel + 1})
+        risk+= 1
+     }
+     if (count > 2 && count <= 4) {
+        // setRiskLevel({riskLevel: riskLevel + 2})
+        risk+= 2
+     }
+      if (count > 4) {
+        //  setRiskLevel({riskLevel:  riskLevel + 3})
+        risk +=3
+     }
+        console.log(dryCough);
+        console.log(count);
+        console.log(risk)
+        return risk;
+
       risk += 1
-    }
+    
     if (count > 2 && count <= 4) {
       risk += 2
     }
@@ -107,6 +123,7 @@ function ModalPopUp() {
                 <Form.Group as={Row} controlId="formHorizontalEmail">
                   <Form.Label column sm={2}>
                     First Name:
+
               </Form.Label>
                   <Col sm={10}>
                     <Form.Control
@@ -271,31 +288,31 @@ function ModalPopUp() {
                   <Form.Label as="legend" column md={5}>
                     5.Headache ?
               </Form.Label>
-                  <Col xs="auto" className="my-1">
-                    <Form.Check
-                      type="radio"
-                      name="headache"
-                      label="Yes"
-                      value={true}
-                      checked={headache === true}
-                      onChange={() => setHeadache(true)}
-                    />
-                  </Col>
-                  <Col xs="auto" className="my-1">
-                    <Form.Check
-                      type="radio"
-                      name="headache"
-                      label="no"
-                      value={false}
-                      checked={headache === false}
-                      onChange={() => setHeadache(false)}
-                    />
-                  </Col>
-                </Form.Group>
+              <Col xs="auto" className="my-1">
+                <Form.Check
+                  type="radio"
+                  name="headache"
+                  label="Yes"
+                  value={true}
+                  checked= {headache === true }                 
+                  onChange={() => setHeadache(true)}
+                />
+              </Col>
+              <Col xs="auto" className="my-1">
+                <Form.Check
+                  type="radio"
+                  name="headache"
+                  label="No"
+                  value={false}
+                  checked= {headache === false }                 
+                  onChange={() => setHeadache(false)}
+                />
+              </Col>
+            </Form.Group>
                 <Form.Group as={Row}>
                   <Form.Label as="legend" column md={5}>
                     6.Fatigue ?
-              </Form.Label>
+                 </Form.Label>
                   <Col xs="auto" className="my-1">
                     <Form.Check
                       type="radio"
@@ -322,7 +339,7 @@ function ModalPopUp() {
                     7.Have you had any close contact with anyone with
                     COVID-19("Close contact is defined as less than 6ft distance for
                     more than 10min") ?
-              </Form.Label>
+                 </Form.Label>
                   <Col xs="auto" className="my-1">
                     <Form.Check
                       type="radio"

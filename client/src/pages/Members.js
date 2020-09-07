@@ -58,7 +58,7 @@ useEffect(() => {
                   Email
                   </th>
                 <th>
-                  Status
+                  Risk level
                   </th>
                 <th>
                   Alert
