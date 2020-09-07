@@ -4,12 +4,12 @@ module.exports = function (sequelize, DataTypes) {
     first: {
       type: DataTypes.STRING,
       allowNull: false,
-      isAlpha: true,
+     
     },
     last: {
       type: DataTypes.STRING,
       allowNull: false,
-      isAlpha: true,
+     
     },
     email: {
       type: DataTypes.STRING,
@@ -20,7 +20,6 @@ module.exports = function (sequelize, DataTypes) {
     age: {
       type: DataTypes.INTEGER,
       isNumeric: true,
-      allowNull: false,
     },
     riskLevel: {
       type: DataTypes.INTEGER,

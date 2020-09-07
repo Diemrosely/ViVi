@@ -1,0 +1,17 @@
+Table .red3Table td{
+    background-color: rgb(224, 42, 42)
+}
+Table .yellow1Table td{
+    background-color: rgb(208, 211, 27)
+}
+Table .SpringGreen3Table td{
+    background-color: rgb(22, 172, 79)
+}
+td {
+    color: black;
+    font-size: 12px;
+    font-weight: 600;
+}
+.tblBtn {
+    background: rgb(77, 75, 75)!important;
+}
