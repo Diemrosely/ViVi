@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Russo+One');
 
 html{
-    font-size:10px;
+    font-size:14px;
 }
 .picture{
     width: 100%;
@@ -31,7 +31,6 @@ html{
     color: blue;
     height: 35px;
     width: 35px;
-    padding-bottom: 8px;
 }
 
 .app-toolbar {
