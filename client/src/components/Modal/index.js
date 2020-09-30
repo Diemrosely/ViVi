@@ -314,9 +314,7 @@ function ModalPopUp() {
                 </Form.Group>
                 <Form.Group as={Row}>
                   <Form.Label as="legend" column md={5}>
-                    7.Have you had any close contact with anyone with
-                    COVID-19("Close contact is defined as less than 6ft distance for
-                    more than 10min") ?
+                    7.Fever ?
               </Form.Label>
                   <Col xs="auto" className="my-1">
                     <Form.Check
