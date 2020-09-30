@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Russo+One');
 
 html{
-    font-size:14px;
+    font-size:10px;
 }
 .picture{
     width: 100%;
@@ -24,13 +24,14 @@ html{
     position: relative;
     top: 9%;
     height: 35px;
-    width: 190px;
+    width: 240px;
 }
 
 .fa-arrow-alt-circle-right{
     color: blue;
-    height: 40px;
-    width: 40px;
+    height: 35px;
+    width: 35px;
+    padding-bottom: 8px;
 }
 
 .app-toolbar {
