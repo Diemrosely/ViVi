@@ -160,7 +160,7 @@ function ModalPopUp() {
             </p>
                 <Form.Group as={Row}>
                   <Form.Label as="legend" column md={5}>
-                    1. Dry Cough ?
+                    1. Dry Cough?
               </Form.Label>
                   <Col xs="auto" className="my-1">
                     <Form.Check
@@ -185,7 +185,7 @@ function ModalPopUp() {
                 </Form.Group>
                 <Form.Group as={Row}>
                   <Form.Label as="legend" column md={5}>
-                    2.Shortness of breath ?
+                    2. Shortness of breath?
               </Form.Label>
                   <Col xs="auto" className="my-2">
                     <Form.Check
@@ -212,7 +212,7 @@ function ModalPopUp() {
                 </Form.Group>
                 <Form.Group as={Row}>
                   <Form.Label as="legend" column md={5}>
-                    3.Muscle Aches ?
+                    3. Muscle Aches?
               </Form.Label>
                   <Col xs="auto" className="my-1">
                     <Form.Check
@@ -239,7 +239,7 @@ function ModalPopUp() {
                 </Form.Group>
                 <Form.Group as={Row}>
                   <Form.Label as="legend" column md={5}>
-                    4.Sore Throat ?
+                    4. Sore Throat?
               </Form.Label>
                   <Col xs="auto" className="my-1">
                     <Form.Check
@@ -264,7 +264,7 @@ function ModalPopUp() {
                 </Form.Group>
                 <Form.Group as={Row}>
                   <Form.Label as="legend" column md={5}>
-                    5.Headache ?
+                    5. Headache?
               </Form.Label>
                   <Col xs="auto" className="my-1">
                     <Form.Check
@@ -289,7 +289,7 @@ function ModalPopUp() {
                 </Form.Group>
                 <Form.Group as={Row}>
                   <Form.Label as="legend" column md={5}>
-                    6.Fatigue ?
+                    6. Fatigue?
               </Form.Label>
                   <Col xs="auto" className="my-1">
                     <Form.Check
@@ -314,7 +314,7 @@ function ModalPopUp() {
                 </Form.Group>
                 <Form.Group as={Row}>
                   <Form.Label as="legend" column md={5}>
-                    7.Fever ?
+                    7. Fever?
               </Form.Label>
                   <Col xs="auto" className="my-1">
                     <Form.Check
